@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+<style>
+  body{
+    background-image:url(https://wp-mktg.prod.getty1.net/istockcontentredesign/wp-content/uploads/sites/5/2021/03/2021_iStock_LatestBGTrends_Hero.jpg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
+
+<title>Form</title>
+</head>
+<body >
+    <div class="container">
+
+        <form class="well form-horizontal" action="form_submissionat" method='POST'  id="contact_form">
+    <fieldset>
+        {% csrf_token %}
+    <!-- Form Name -->
+    <legend><center><h2 style="margin-top: 1rem;"><b>Registration Form</b></h2></center></legend><br>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold">Movie Name</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="movie_name" placeholder="Movie Name" class="form-control"  type="text" required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold">Movie Review</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="movie_review" placeholder="Movie Review" class="form-control"  type="text" required>
+        </div>
+      </div>
+    </div>
+  
+      
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold">Movie Release Date</label>  
+      <div class="col-md-4 inputGroupContainer">
+      <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input  name="movie_release" placeholder="Movie Release Date" class="form-control"  type="text" required>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    
+    <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold" >Movie Detail</label> 
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input name="movie_detail" placeholder="Movie Detail" class="form-control"  type="text" required>
+        </div>
+      </div>
+    </div>
+           <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold">Hero Name</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="hero_name" placeholder="Hero Name" class="form-control"  type="text" required>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Text input-->
+           
+    <div class="form-group">
+      <label class="col-md-4 control-label" style="color:darkgreen;font-size:larger;font-weight:bold">Heroin Name</label>  
+        <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+      <input name="heroin_name" placeholder="Heroin Name" class="form-control" type="text" required>
+        </div>
+      </div>
+    </div>
+     
+    <!-- Button -->
+    <div class="form-group">
+      <label class="col-md-4 control-label"></label>
+      <div class="col-md-4"><br>
+        <button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSave<span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+      </div>
+    </div>
+    </fieldset>
+    </form>
+    </div>  
+        
+        <div style="margin-top: 1rem;"  class="container bg_light">
+          <div class="col-md-12 text-centre">
+              <form action="view">
+                  <input type="submit" class="btn btn-primary" value="View Movies" />
+              </form> 
+          </div></div>
+        
+
+
+</body>
+</html>

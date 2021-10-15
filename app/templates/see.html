@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <title>Info</title>
+</head>
+<body style="background-color:rgb(236, 153, 236);">
+    <h1 style="text-align: center; margin-top:2rem ;padding-top:1rem; margin-bottom:1rem">Movies</h1>
+<div class="container info-boxes pt100 pb100">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Movie Name </th>
+        <th scope="col"> Hero</th>
+        <th scope="col"> Heroin</th>
+        <th scope="col">Movie review</th>
+        <th scope="col">Released on</th>
+        <th scope="col">Movie details</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for movie in Movies %}
+      <tr>
+    <td>$$</td>
+    <td><a href="print">{{movie.movie_name}}</a> </td>
+    <td>{{movie.movie_hero}} </td>   
+    <td>{{movie.movie_heroin}} </td>
+    <td>{{movie.movie_review}} </td> 
+    <td>{{movie.movie_release_date}} </td>   
+    <td>{{movie.movie_detail}} </td>         
+      </tr>
+      {% endfor%} 
+    
+    </tbody>
+  </table>
+</div>
+<div class="container bg_light">
+<div class="col-md-12 text-centre">
+    <form action="back">
+        <input type="submit" class="btn btn-primary" value="Back" />
+    </form> 
+</div></div>
+
+
+</body>
+</html>
